@@ -13,11 +13,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Softwares/SDKs
 1. MySQL running on localhost
 2. Jdk 1.8.0 and above
-3. Eclipse IDE
+3. Any IDE
 4. Tomcat 8.0
 
 ## Steps to run the application
-1. Open Project in Eclipse
+1. Open Project in any IDE
 2. Run the sql scripts present in the 'sqlDump' folder within the project
 3. Right click on Home.jsp under the WebContent Folder, click on run
 4. Refer the Quick Start Guide to understand the how system works.
