@@ -1,4 +1,4 @@
-# 'Cover to Cover' Library Management System
+# Library Management System
 Build a Library Management System to search for books, manage borrowers, checking and check out of books, payment of fines. 
 The users of the system are understood to be librarians (not book borrowers).
 
@@ -7,18 +7,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-Operating System:
+### Operating System:
 1. Windows 10
 
-Softwares/SDKs
+### Softwares/SDKs
 1. MySQL running on localhost
 2. Jdk 1.8.0 and above
 3. Eclipse IDE
 4. Tomcat 8.0
-5. Java SE platform 
-6. JDK installed 
 
-Dependency Jars
+### Dependency Jars
 jstl-1.2.jar
 mysql-connector-java-8.0.14.jar
 
