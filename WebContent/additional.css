@@ -1,0 +1,5 @@
+@charset "ISO-8859-1";
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}

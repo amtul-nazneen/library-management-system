@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 5, 2016 12:36:38 AM by Hibernate Tools 3.4.0.CR1 -->
+<!-- hibernate-mapping>
+    <class name="app.model.BookLoans" table="BOOK_LOANS">
+
+        <id column="LOAN_ID" name="loanId" type="java.lang.Integer"/>
+        <property column="ISBN" name="isbn" type="java.lang.String"/>
+        <property column="CARD_ID" name="cardId" type="java.lang.Integer"/>
+        <property column="DATE_OUT" name="dateOut" type="java.sql.Date"/>
+        <property column="DUE_DATE" name="dateDue" type="java.sql.Date"/>
+        <property column="DATEIN" name="dateIn" type="java.sql.Date"/>
+        <set name="fines" table="FINES" inverse="false" lazy="true">
+            <key>
+                <column name="LOAN_ID" />
+            </key>
+            <one-to-many class="app.model.Fines"/>
+        </set>
+    </class>
+</hibernate-mapping-->
+<hibernate-mapping>
+	<class name="app.model.BookLoans" table="BOOK_LOANS">
+		<id name="loanId" type="java.lang.Integer">
+			<column name="LOAN_ID" />
+			<generator class="identity" />
+		</id>
+		<property name="isbn" type="java.lang.String">
+			<column name="ISBN" />
+		</property>
+			<property name="cardId" type="java.lang.Integer">
+			<column name="CARD_ID" />
+		</property>
+			<property name="dateOut" type="java.sql.Date">
+			<column name="DATE_OUT" />
+		</property>
+			<property name="dateDue" type="java.sql.Date">
+			<column name="DATE_DUE" />
+		</property>
+			<property name="dateIn" type="java.sql.Date">
+			<column name="DATE_IN" />
+		</property>
+		<one-to-one name="fine" class="app.model.Fines"
+			cascade="save-update"></one-to-one>
+			
+	</class>
+</hibernate-mapping>

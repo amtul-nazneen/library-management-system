@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 5, 2016 12:36:38 AM by Hibernate Tools 3.4.0.CR1 -->
+<!--hibernate-mapping>
+    <class name="app.model.Fines" table="FINES">
+        <id column="LOAN_ID" name="loanId" type="java.lang.Integer"/>
+        <property column="FINE_AMOUNT" name="fineAmount" type="java.lang.Double"/>
+        <property column="PAID" name="paid" type="java.lang.Integer"/>
+        <many-to-one column="LOAN_ID" name="bookLoan" class="app.model.BookLoans" fetch="join"/>
+    </class>
+</hibernate-mapping-->
+
+<hibernate-mapping>
+	<class name="app.model.Fines" table="FINES">
+		<id name="loanId" type="java.lang.Integer">
+			<column name="LOAN_ID" />
+			<generator class="foreign">
+				<param name="property">bookLoan</param>
+			</generator>
+		</id>
+		<one-to-one name="bookLoan" class="app.model.BookLoans" constrained="true">
+		</one-to-one>
+		<property name="fineAmount" type="java.lang.Integer">
+			<column name="FINE_AMT"/>
+		</property>
+		<property name="paid" type="java.lang.Integer">
+			<column name="PAID" />
+		</property>
+	</class>
+</hibernate-mapping>
