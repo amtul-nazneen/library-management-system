@@ -16,13 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 3. Eclipse IDE
 4. Tomcat 8.0
 
-### Dependency Jars
-jstl-1.2.jar
-mysql-connector-java-8.0.14.jar
-
-
 ## Steps to run the application
-
 1. Open Project in Eclipse
 2. Run the sql scripts present in the 'sqlDump' folder within the project
 3. Right click on Home.jsp under the WebContent Folder, click on run
